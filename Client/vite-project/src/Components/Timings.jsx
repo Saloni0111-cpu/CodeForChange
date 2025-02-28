@@ -19,12 +19,14 @@ const StyleWrapper = styled.div`
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-p{
-color:black;
-}
+
+  p {
+    color: black;
+  }
+
   .features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 800px;
     margin: 20px auto;
@@ -39,9 +41,10 @@ color:black;
   }
 
   .feature-item img {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
+    border-radius: 8px;
   }
 
   .about {
@@ -63,46 +66,31 @@ color:black;
   }
 `;
 
-const Features = () => {
+const Timings = () => {
   return (
     <StyleWrapper>
       <div className="home-container">
         <header>
-          <h1>What brings you</h1>
-          <p>To Silent Moon.</p>
+          <h1>Welcome to Our Website</h1>
+          <p>Your one-stop solution for all your needs.</p>
         </header>
 
         <main>
           <section className="features">
+            <h2>Features</h2>
             <div className="feature-item">
-              <img src="/assets/Med.png" alt="Feature 1" />
-              <h3>Feature 1</h3>
-              <p>Reduce Stress</p>
+              <img src="./assets/Med.png" alt="Feature 1" />
+              <h3>Feature 1 Title</h3>
+              <p>Description of Feature 1.</p>
             </div>
             <div className="feature-item">
-              <img src="/assets/Meditation.png" alt="Feature 2" />
-              <h3>Feature 2</h3>
-              <p>Improve Performance</p>
+              <img src="./assets/Meditation.png" alt="Feature 2" />
+              <h3>Feature 2 Title</h3>
+              <p>Description of Feature 2.</p>
             </div>
             <div className="feature-item">
-              <img src="/assets/Relax.jpeg" alt="Feature 3" />
-              <h3>Feature 3</h3>
-              <p>Increase Happiness</p>
-            </div>
-            <div className="feature-item">
-              <img src="/assets/Focus.jpeg" alt="Feature 4" />
-              <h3>Feature 4</h3>
-              <p>Description of Feature 4.</p>
-            </div>
-            <div className="feature-item">
-              <img src="/assets/Sleep.png" alt="Feature 5" />
-              <h3>Feature 5</h3>
-              <p>Description of Feature 5.</p>
-            </div>
-            <div className="feature-item">
-              <img src="/assets/Exercise.png" alt="Feature 6" />
-              <h3>Feature 6</h3>
-              <p>Description of Feature 6.</p>
+              <h3>Feature 3 Title</h3>
+              <p>Description of Feature 3.</p>
             </div>
           </section>
 
@@ -120,4 +108,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Timings;

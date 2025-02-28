@@ -1,32 +1,54 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
-const Sbutton = () => {
+const SButton = () => {
+  const navigate = useNavigate(); // Corrected useNavigate hook
+
+  const About = () => {
+    navigate('/about'); // Corrected navigation function
+  };
+
   return (
     <StyledWrapper>
-      <button>
-        <span className="span-mother">
-          <span>B</span>
-          <span>u</span>
-          <span>t</span>
-          <span>t</span>
-          <span>o</span>
-          <span>n</span>
-        </span>
-        <span className="span-mother2">
-          <span>B</span>
-          <span>u</span>
-          <span>t</span>
-          <span>t</span>
-          <span>o</span>
-          <span>n</span>
-        </span>
-      </button>
+      <div className="button-container">
+        <button onClick={About}>
+          <span className="span-mother">
+            <span>S</span>
+            <span>T</span>
+            <span>A</span>
+            <span>R</span>
+            <span>T</span>
+          </span>
+          <span className="span-mother2">
+            <span>S</span>
+            <span>T</span>
+            <span>A</span>
+            <span>R</span>
+            <span>T</span>
+          </span>
+        </button>
+      </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   button {
     font-weight: bold;
     color: white;
@@ -39,6 +61,8 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
   }
 
   button .span-mother {
@@ -74,10 +98,6 @@ const StyledWrapper = styled.div`
     transition: 0.6s;
   }
 
-  button .span-mother span:nth-child(6) {
-    transition: 0.7s;
-  }
-
   button .span-mother2 {
     display: flex;
     position: absolute;
@@ -111,9 +131,6 @@ const StyledWrapper = styled.div`
   button .span-mother2 span:nth-child(5) {
     transition: 0.6s;
   }
+`;
 
-  button .span-mother2 span:nth-child(6) {
-    transition: 0.7s;
-  }`;
-
-export default Sbutton;
+export default SButton;
