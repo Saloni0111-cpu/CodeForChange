@@ -8,7 +8,7 @@ const ChatContainer = styled.div`
   right: 20px;
   width: 380px;
   height: 440px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: transparent;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;

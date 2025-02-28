@@ -5,7 +5,7 @@ const StyleWrapper = styled.div`
   .home-container {
     text-align: center;
     font-family: Arial, sans-serif;
-    background: #eef2f7;
+    background: linear-gradient(135deg,rgb(23, 4, 56) 0%, #025e4c 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
